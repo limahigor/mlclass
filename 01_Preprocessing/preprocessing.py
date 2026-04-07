@@ -6,7 +6,7 @@ Funções de pré-processamento para o dataset de diabetes.
 O pipeline padrão foi desenhado para o k-NN usado no projeto:
 1. converter strings vazias para ausentes;
 2. tratar zero como ausente apenas nas colunas biomédicas problemáticas;
-3. imputar ausentes com a média calculada no conjunto de treino;
+3. imputar ausentes com a mediana calculada no conjunto de treino;
 4. aplicar clipping por quantis para reduzir o impacto de extremos;
 5. padronizar as features via z-score.
 """
@@ -113,7 +113,7 @@ def coerce_and_mark_missing(
 def fit_preprocessing(
     dataframe: pd.DataFrame,
     feature_cols: Sequence[str],
-    imputation_strategy: str = "mean",
+    imputation_strategy: str = "median",
     lower_q: float = 0.01,
     upper_q: float = 0.99,
     apply_clipping: bool = True,
@@ -210,7 +210,7 @@ def preprocess_train_and_app(
     train_df: pd.DataFrame,
     app_df: pd.DataFrame,
     feature_cols: Optional[Sequence[str]] = None,
-    imputation_strategy: str = "mean",
+    imputation_strategy: str = "median",
     lower_q: float = 0.01,
     upper_q: float = 0.99,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, Dict[str, object]]:

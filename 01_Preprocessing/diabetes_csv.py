@@ -31,7 +31,7 @@ data, data_app, preprocessing_artifacts = preprocess_train_and_app(
     data,
     data_app,
     feature_cols=feature_cols,
-    imputation_strategy="mean",
+    imputation_strategy="median",
 )
 
 X = data[feature_cols]
