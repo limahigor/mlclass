@@ -1,0 +1,224 @@
+{
+  "train_shape": [
+    3132,
+    9
+  ],
+  "app_shape": [
+    1045,
+    8
+  ],
+  "columns": [
+    "sex",
+    "length",
+    "diameter",
+    "height",
+    "whole_weight",
+    "shucked_weight",
+    "viscera_weight",
+    "shell_weight",
+    "type"
+  ],
+  "missing_values": {
+    "sex": 0,
+    "length": 0,
+    "diameter": 0,
+    "height": 0,
+    "whole_weight": 0,
+    "shucked_weight": 0,
+    "viscera_weight": 0,
+    "shell_weight": 0,
+    "type": 0
+  },
+  "app_missing_values": {
+    "sex": 0,
+    "length": 0,
+    "diameter": 0,
+    "height": 0,
+    "whole_weight": 0,
+    "shucked_weight": 0,
+    "viscera_weight": 0,
+    "shell_weight": 0
+  },
+  "class_distribution": {
+    "1": 1078,
+    "2": 1003,
+    "3": 1051
+  },
+  "numeric_summary": {
+    "length": {
+      "count": 3132.0,
+      "mean": 0.5214,
+      "std": 0.1208,
+      "min": 0.075,
+      "25%": 0.45,
+      "50%": 0.54,
+      "75%": 0.61,
+      "max": 0.815
+    },
+    "diameter": {
+      "count": 3132.0,
+      "mean": 0.4059,
+      "std": 0.0996,
+      "min": 0.055,
+      "25%": 0.345,
+      "50%": 0.42,
+      "75%": 0.48,
+      "max": 0.65
+    },
+    "height": {
+      "count": 3132.0,
+      "mean": 0.1383,
+      "std": 0.0392,
+      "min": 0.0,
+      "25%": 0.11,
+      "50%": 0.14,
+      "75%": 0.165,
+      "max": 0.515
+    },
+    "whole_weight": {
+      "count": 3132.0,
+      "mean": 0.8187,
+      "std": 0.4896,
+      "min": 0.002,
+      "25%": 0.4364,
+      "50%": 0.787,
+      "75%": 1.1416,
+      "max": 2.8255
+    },
+    "shucked_weight": {
+      "count": 3132.0,
+      "mean": 0.3554,
+      "std": 0.2215,
+      "min": 0.001,
+      "25%": 0.1815,
+      "50%": 0.3305,
+      "75%": 0.4975,
+      "max": 1.488
+    },
+    "viscera_weight": {
+      "count": 3132.0,
+      "mean": 0.1783,
+      "std": 0.1096,
+      "min": 0.0005,
+      "25%": 0.0909,
+      "50%": 0.168,
+      "75%": 0.2501,
+      "max": 0.76
+    },
+    "shell_weight": {
+      "count": 3132.0,
+      "mean": 0.2356,
+      "std": 0.1392,
+      "min": 0.0015,
+      "25%": 0.1275,
+      "50%": 0.225,
+      "75%": 0.3236,
+      "max": 1.005
+    }
+  },
+  "correlation_with_type": {
+    "shell_weight": 0.6305,
+    "height": 0.6075,
+    "diameter": 0.5977,
+    "length": 0.5825,
+    "whole_weight": 0.5806,
+    "viscera_weight": 0.5643,
+    "shucked_weight": 0.4912
+  },
+  "cv_results": [
+    {
+      "model": "svm_rbf",
+      "accuracy_mean": 0.674654,
+      "accuracy_std": 0.017404,
+      "f1_macro_mean": 0.672814,
+      "f1_macro_std": 0.01866
+    },
+    {
+      "model": "logistic_regression",
+      "accuracy_mean": 0.653257,
+      "accuracy_std": 0.013607,
+      "f1_macro_mean": 0.649784,
+      "f1_macro_std": 0.014835
+    },
+    {
+      "model": "random_forest",
+      "accuracy_mean": 0.651359,
+      "accuracy_std": 0.026829,
+      "f1_macro_mean": 0.647465,
+      "f1_macro_std": 0.029381
+    },
+    {
+      "model": "lda",
+      "accuracy_mean": 0.642087,
+      "accuracy_std": 0.013326,
+      "f1_macro_mean": 0.643141,
+      "f1_macro_std": 0.014017
+    },
+    {
+      "model": "knn_11",
+      "accuracy_mean": 0.628671,
+      "accuracy_std": 0.016609,
+      "f1_macro_mean": 0.625824,
+      "f1_macro_std": 0.016056
+    },
+    {
+      "model": "decision_tree",
+      "accuracy_mean": 0.611435,
+      "accuracy_std": 0.031731,
+      "f1_macro_mean": 0.609999,
+      "f1_macro_std": 0.030574
+    }
+  ],
+  "selected_model": "svm_rbf",
+  "holdout_accuracy": 0.6810207336523126,
+  "holdout_classification_report": {
+    "1": {
+      "precision": 0.7699115044247787,
+      "recall": 0.8055555555555556,
+      "f1-score": 0.7873303167420814,
+      "support": 216.0
+    },
+    "2": {
+      "precision": 0.5560975609756098,
+      "recall": 0.5671641791044776,
+      "f1-score": 0.5615763546798029,
+      "support": 201.0
+    },
+    "3": {
+      "precision": 0.7091836734693877,
+      "recall": 0.6619047619047619,
+      "f1-score": 0.6847290640394089,
+      "support": 210.0
+    },
+    "accuracy": 0.6810207336523126,
+    "macro avg": {
+      "precision": 0.6783975796232588,
+      "recall": 0.6782081655215983,
+      "f1-score": 0.6778785784870976,
+      "support": 627.0
+    },
+    "weighted avg": {
+      "precision": 0.6810288136210864,
+      "recall": 0.6810207336523126,
+      "f1-score": 0.6805953734532788,
+      "support": 627.0
+    }
+  },
+  "holdout_confusion_matrix": [
+    [
+      174,
+      35,
+      7
+    ],
+    [
+      37,
+      114,
+      50
+    ],
+    [
+      15,
+      56,
+      139
+    ]
+  ]
+}
