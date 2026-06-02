@@ -1,0 +1,32 @@
+Registros originais: 5972
+Registros usados no clustering: 4979
+Registros removidos: 993
+
+Métricas por k:
+ k    inertia  silhouette  davies_bouldin  calinski_harabasz
+ 2 27956.0644      0.3276          1.1144          3000.6760
+ 3 23062.6034      0.2534          1.2977          2346.2313
+ 4 20916.6264      0.2010          1.4731          1894.4213
+ 5 18989.1656      0.2107          1.3903          1690.9358
+ 6 17940.5373      0.1784          1.4479          1489.6649
+ 7 17198.0868      0.1794          1.4995          1330.5041
+ 8 16542.9031      0.1598          1.5578          1213.4743
+
+Contagem por perfil:
+Perfil
+A - Fino difuso                    763
+B - Intermediário baixo           1511
+C - Assimétrico superior/nasal     594
+D - Intermediário alto            1494
+E - Espesso difuso                 617
+
+Resumo dos perfis:
+                                   n    pct  mean_epi  range_epi min_region max_region
+Perfil                                                                                
+A - Fino difuso                  763  15.32     47.07       2.08         ST          I
+B - Intermediário baixo         1511  30.35     51.31       2.84          S          I
+C - Assimétrico superior/nasal   594  11.93     53.31       9.57         IT         SN
+D - Intermediário alto          1494  30.01     55.53       2.57          S          I
+E - Espesso difuso               617  12.39     60.59       1.70          S         IN
+
+PCA explained variance: [0.60793785 0.1323107 ]
